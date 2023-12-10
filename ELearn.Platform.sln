@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELearn.Platform.Domain", "ELearn.Platform.Data\ELearn.Platform.Domain.csproj", "{10E6A380-603E-4CB9-9D08-CCCBD77EB663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELearn.Platform.Domain", "ELearn.Platform.Domain\ELearn.Platform.Domain.csproj", "{10E6A380-603E-4CB9-9D08-CCCBD77EB663}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELearn.Platform.Application", "ELearn.Platform.Application\ELearn.Platform.Application.csproj", "{35D94466-50A3-4291-826E-636892456BBE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELearn.Platform.Infrastructure", "ELearn.Platform.Infrastructure\ELearn.Platform.Infrastructure.csproj", "{6FFA3D4C-8738-4D3D-B095-781A292755F6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{10E6A380-603E-4CB9-9D08-CCCBD77EB663} = {10E6A380-603E-4CB9-9D08-CCCBD77EB663}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELearn.Platform.Api", "ELearn.Platform.Api\ELearn.Platform.Api.csproj", "{F8716AD4-0AF4-48A6-8A70-209214AFB030}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +24,18 @@ Global
 		{10E6A380-603E-4CB9-9D08-CCCBD77EB663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10E6A380-603E-4CB9-9D08-CCCBD77EB663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10E6A380-603E-4CB9-9D08-CCCBD77EB663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D94466-50A3-4291-826E-636892456BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D94466-50A3-4291-826E-636892456BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D94466-50A3-4291-826E-636892456BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D94466-50A3-4291-826E-636892456BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFA3D4C-8738-4D3D-B095-781A292755F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFA3D4C-8738-4D3D-B095-781A292755F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFA3D4C-8738-4D3D-B095-781A292755F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFA3D4C-8738-4D3D-B095-781A292755F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8716AD4-0AF4-48A6-8A70-209214AFB030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8716AD4-0AF4-48A6-8A70-209214AFB030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8716AD4-0AF4-48A6-8A70-209214AFB030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8716AD4-0AF4-48A6-8A70-209214AFB030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
