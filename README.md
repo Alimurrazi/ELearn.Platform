@@ -1,4 +1,4 @@
-# Project Name
+# ELearn.Platform
 
 ## Overview
 
@@ -16,7 +16,7 @@ The project is structured into different layers:
 ## Technologies Used
 
 - **Language**: C#
-- **Framework**: .NET Core/.NET 5
+- **Framework**: .NET 6
 - **Dependency Injection**: Microsoft.Extensions.DependencyInjection
 - **ORM Framework**: Entity Framework Core
 - **Testing Framework**: NUnit or xUnit (optional)
