@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ELearn.Platform.Application
 {
-    public interface IUserService
+    public interface ICourseService
     {
-        List<User> GetUsers();
-        User addUser(User user);
+        List<Course> GetCourses();
+        Course AddCourse(Course course);
     }
 }

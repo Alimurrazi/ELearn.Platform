@@ -18,6 +18,11 @@ namespace ELearn.Platform.Application
             this.userRepository = userRepository;
         }
 
+        public User addUser(User user)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<User> GetUsers()
         {
             var result = this.userRepository.GetUsers();
