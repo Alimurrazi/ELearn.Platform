@@ -1,8 +1,10 @@
 using ELearn.Platform.Application;
 using ELearn.Platform.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// Register Configuration
+ConfigurationManager configuration = builder.Configuration;
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -12,6 +14,9 @@ builder.Services.AddSwaggerGen();
 
 // Adding for dependency injection
 // TODO: need to follow best practises
+builder.Services.AddDbContext<EfDbContext>(option => 
+            option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),b =>
+            b.MigrationsAssembly("ELearn.Platform.Api")));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICourseService, CourseService>();

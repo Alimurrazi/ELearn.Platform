@@ -24,7 +24,7 @@ namespace ELearn.Platform.Api.Controllers
             return _courseService.GetCourses();
         }
 
-        [HttpGet]
+        [HttpPost]
         public Course Post(Course course)
         {
             return _courseService.AddCourse(course);

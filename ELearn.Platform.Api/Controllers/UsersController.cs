@@ -19,8 +19,16 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<User> Get()
+    public ActionResult<List<User>> Get()
     {
-        return _userService.GetUsers();
+        var result = _userService.GetUsers();
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public ActionResult<User> Post(User user)
+    {
+        var result = _userService.AddUser(user);
+        return Ok(result);
     }
 }

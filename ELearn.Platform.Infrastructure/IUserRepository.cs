@@ -10,5 +10,6 @@ namespace ELearn.Platform.Infrastructure
     public interface IUserRepository
     {
         List<User> GetUsers();
+        User AddUser(User user);
     }
 }

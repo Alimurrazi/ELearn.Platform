@@ -4,16 +4,20 @@ namespace ELearn.Platform.Infrastructure
 {
     public class UserRepository : IUserRepository
     {
-        public static List<User> users = new List<User>()
+        private readonly EfDbContext _efDbContext;
+        public UserRepository (EfDbContext efDbContext)
         {
-            new User {Id = Guid.NewGuid() , UserName = "alimurrazi" , FirstName = "alimur", 
-            LastName ="razi"},
-            new User {Id = Guid.NewGuid() , UserName = "alimurrazi" , FirstName = "alimur",
-            LastName ="razi"}
-        };
+            _efDbContext = efDbContext;
+        }
         public List<User> GetUsers()
         {
-            return users;
+            return _efDbContext.Users.ToList();
+        }
+        public User AddUser(User user)
+        {
+             _efDbContext.Users.Add(user);
+            _efDbContext.SaveChanges();
+            return user;
         }
     }
 }

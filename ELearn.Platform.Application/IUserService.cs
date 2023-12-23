@@ -10,6 +10,6 @@ namespace ELearn.Platform.Application
     public interface IUserService
     {
         List<User> GetUsers();
-        User addUser(User user);
+        User AddUser(User user);
     }
 }
