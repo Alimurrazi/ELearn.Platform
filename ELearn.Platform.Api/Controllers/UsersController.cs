@@ -1,4 +1,5 @@
 using ELearn.Platform.Application;
+using ELearn.Platform.Application.Dtos.User;
 using ELearn.Platform.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +27,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult<User> Post(User user)
+    public ActionResult<User> Post(AddUserDto user)
     {
         var result = _userService.AddUser(user);
         return Ok(result);

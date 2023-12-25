@@ -1,4 +1,5 @@
 ﻿using ELearn.Platform.Application;
+using ELearn.Platform.Application.Dtos.Course;
 using ELearn.Platform.Domain.Entity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +26,7 @@ namespace ELearn.Platform.Api.Controllers
         }
 
         [HttpPost]
-        public Course Post(Course course)
+        public Course Post(AddCourseDto course)
         {
             return _courseService.AddCourse(course);
         }

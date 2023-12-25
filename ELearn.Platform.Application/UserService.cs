@@ -1,4 +1,5 @@
-﻿using ELearn.Platform.Domain.Entity;
+﻿using ELearn.Platform.Application.Dtos.User;
+using ELearn.Platform.Domain.Entity;
 using ELearn.Platform.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -18,9 +19,10 @@ namespace ELearn.Platform.Application
             this.userRepository = userRepository;
         }
 
-        public User AddUser(User user)
+        public User AddUser(AddUserDto user)
         {
-            var result = this.userRepository.AddUser(user);
+            User newUser = new User() { UserId = Guid.NewGuid(),FirstName= user.FirstName, LastName = user.LastName, UserName = user.UserName };
+            var result = this.userRepository.AddUser(newUser);
             return result;
         }
 

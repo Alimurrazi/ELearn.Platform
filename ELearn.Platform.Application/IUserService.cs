@@ -1,4 +1,5 @@
-﻿using ELearn.Platform.Domain.Entity;
+﻿using ELearn.Platform.Application.Dtos.User;
+using ELearn.Platform.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace ELearn.Platform.Application
     public interface IUserService
     {
         List<User> GetUsers();
-        User AddUser(User user);
+        User AddUser(AddUserDto user);
     }
 }

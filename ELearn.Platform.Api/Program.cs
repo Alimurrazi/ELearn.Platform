@@ -19,6 +19,7 @@ builder.Services.AddDbContext<EfDbContext>(option =>
             b.MigrationsAssembly("ELearn.Platform.Api")));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<ICourseService, CourseService>();
 
 

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ELearn.Platform.Domain.Entity
+namespace ELearn.Platform.Application.Dtos.Course
 {
-    public class Course
+    public class AddCourseDto
     {
-        public Guid CourseId { get; set; }
         public string Title { get; set; } = String.Empty;
         public string Content { get; set; } = String.Empty;
     }

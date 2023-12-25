@@ -1,4 +1,6 @@
-﻿using ELearn.Platform.Domain.Entity;
+﻿using ELearn.Platform.Application.Dtos.Course;
+using ELearn.Platform.Domain.Entity;
+using ELearn.Platform.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +11,23 @@ namespace ELearn.Platform.Application
 {
     public class CourseService : ICourseService
     {
-        public Course AddCourse(Course course)
+        private readonly ICourseRepository courseRepository;
+
+        public CourseService(ICourseRepository courseRepository)
         {
-            throw new NotImplementedException();
+            this.courseRepository = courseRepository;
+        }
+        public Course AddCourse(AddCourseDto course)
+        {
+            Course newCourse = new Course() { CourseId = Guid.NewGuid(), Title = course.Title, Content = course.Content };
+            var result = this.courseRepository.AddCourse(newCourse);
+            return result;
         }
 
         public List<Course> GetCourses()
         {
-            throw new NotImplementedException();
+            var result = this.courseRepository.GetCourses();
+            return result;
         }
     }
 }

@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ELearn.Platform.Domain.Entity
+namespace ELearn.Platform.Application.Dtos.User
 {
-    public class User
+    public class AddUserDto
     {
-        public Guid UserId { get; set; }
-        public string? UserName { get; set; }
+        public string UserName { get; set; } = string.Empty;
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
     }
